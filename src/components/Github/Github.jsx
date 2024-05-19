@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
+import { useLoaderData } from "react-router-dom"
 
 
 const Github = () => {
-  const [data, setData] = useState([])
+  const data = useLoaderData([])
 
-  useEffect(() => {
-    fetch("https://api.github.com/users/Zobayer26").then((res) => res.json()).then((res) => setData(res))
+  // useEffect(() => {
+  //   fetch("https://api.github.com/users/Zobayer26").then((res) => res.json()).then((res) => setData(res))
 
-  }, [])
+  // }, [])
   console.log(data)
   return (
     <div className="w-full max-w-[800px] mx-auto flex bg-orange-600
@@ -26,3 +27,4 @@ const Github = () => {
 }
 
 export default Github
+
